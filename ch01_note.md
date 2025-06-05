@@ -1,0 +1,34 @@
+# Reading 1: Static Checking 
+- The Big Three important properties of software
+    - **Safe from bugs(SFB)**. Correctness (correct behavior right now) and defensiveness (correct behavior in the future) are required in any software we build.
+    - **Easy to understand(ETU)**. The code has to communicate to future programmers who need to understand it and make changes in it (fixing bugs or adding new features). That future programmer might be you, months or years from now. You’ll be surprised how much you forget if you don’t write it down, and how much it helps your own future self to have a good design.
+    - **Ready for change(RFC)**. Software always changes. Some designs make it easy to make changes; others require throwing away and rewriting a lot of code.
+- A **type** is a set of values, along with operations that can be performed on those values.
+- **Operations** are functions that take inputs and produce outputs (and sometimes change the values themselves). The syntax for operations varies, but we still think of them as functions no matter how they’re written.
+- *Static-types* at compile time, *dynamic-types* at runtime
+- The three kinds of automatic checking
+    - **Static checking**: the bug is found automatically before the program even runs.
+        - *syntax errors*, like extra punctuation or spurious words.
+        - *misspelled names*, like Math.sine(2). (The correct spelling is sin.)
+        - *wrong number of arguments*, like Math.sin(30, 20).
+        - *wrong argument types*, like Math.sin("30").
+        - *wrong return types*, like return "30"; from a function that’s declared to return a number
+    - **Dynamic checking**: the bug is found automatically when the code is executed.
+        - *specific illegal argument values*. For example, the expression x/y is erroneous when y is zero
+        - *illegal conversions*, i.e., when the specific value can’t be converted to or represented in the target type.
+        - *out-of-range indices*, e.g., using a too-large index on a string or array.
+        - *calling a method on a bad object reference*
+    - **No checking**: the language doesn’t help you find the error at all. You have to watch for it yourself, or end up with wrong answers.
+- Surprise: number is not a true number
+    - Limited precision for integers.
+    - Special values.
+        - NaN("Not a Number").
+        - POSITIVE_INFINITY
+        - NEGATIVE_INFINITY
+    - Overflow and underflow.
+        - MAX_VALUE
+        - MIN_VALUE
+- Immutability – intentionally forbidding certain things from changing at runtime
+- Programs have to be written with two goals in mind:
+    - **communicating with the computer**. First persuading the compiler that your program is sensible – syntactically correct and type-correct. Then getting the logic right so that it gives the right results at runtime.
+    - **communicating with other people**. Making the program easy to understand, so that when somebody has to fix it, improve it, or adapt it in the future, they can do so.
