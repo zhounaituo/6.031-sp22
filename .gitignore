@@ -11,6 +11,9 @@ yarn-error.log
 !.vscode/launch.json
 !.vscode/extensions.json
 
+# Obsidian
+.obsidian/
+
 # 编译输出
 *.js.map
 *.d.ts
