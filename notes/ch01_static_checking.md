@@ -19,7 +19,7 @@
         - *out-of-range indices*, e.g., using a too-large index on a string or array.
         - *calling a method on a bad object reference*
     - **No checking**: the language doesn’t help you find the error at all. You have to watch for it yourself, or end up with wrong answers.
-- Surprise: number is not a true number
+- Surprise: **number is not a true number**
     - Limited precision for integers.
     - Special values.
         - NaN("Not a Number").
