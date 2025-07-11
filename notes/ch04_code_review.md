@@ -1,4 +1,20 @@
-# Code Review
+- 代码审查(Code review):利用其他人员系统的,仔细地研究源代码的程序测试方式.
+    - 代码审查的几个目的:
+        1. 提升代码质量.
+        2. 提示程序员能力.
+    - 代码审查的几点原则:
+        1. 不要重复自己.
+        2. 在需要注释的地方进行注释.
+        3. 快速失败.
+        4. 避免魔法数字.
+        5. 一个目的一个变量.
+        6. 使用好的名字.
+        7. 使用空格格式化代码.
+        8. 不要使用全局变量.
+        9. 方法需要返回值,而不是打印值.
+        10. 避免写特殊情况代码.
+
+# Code RevieO
 
 **Code review** is careful, systematic study of source code by people who are not the original author or the code.
 

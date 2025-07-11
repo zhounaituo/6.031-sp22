@@ -1,3 +1,43 @@
+- 校验(Validation) 的目的是发现程序中存在的问题,以增强自己对程序正确性的信心.
+    - 形式推理(Formal reasoning): 也被称为 _validation_.也就是利用数学方法证明.
+    - 代码审查(Code review): 让别人阅读你的代码,发现其中的问题.
+    - 测试(Testing): 精心挑选输入,以测试和校验输入是否正确.
+- 系统化测试(Systematic testing)利用一定的原则来挑选测试用例,进行程序测试.通常包含以下原则:
+    - 正确性(Correct),即测试用例要符合规格书.
+    - 彻底性(Thorough)
+    - 小型性(Small)
+- 自动单元测试:对独立模块进行测试的方式.
+- 黑白盒测试
+    - 黑盒测试:仅通过规格书选取测试用例.
+    - 白盒测试:通过函数的实现选取测试用例.
+- 整体测试(Integration test):对一组模块或是整个程序进行测试.
+- 自动回归测试(Automated regression testing):在程序修改前或是修改后自动进行测试.
+- 测试相关:
+    - 通过划分来选择测试用例:将程序的输入分为不同的部分,每个部分只取几个用例作为该部分的测试代表.
+        - 包含边界值(boundaries)
+            - 0
+            - 类型的最大值和最小值.
+            - 空值
+            - 数组的开头和结尾.
+    - 使用不同划分方式进行选取.
+    - 写下你的测试策略:用例分区,子域.
+    - 覆盖率(Coverage):测试用例对程序的覆盖程度.
+        - 覆盖的类型:
+            - 语句覆盖率(Statement coverage):对每一条语句的覆盖.
+            - 分支覆盖率(Branch coverage):对 if 和 while 类语句的分支进行测试.
+            - 路径覆盖率(Path coverage):程序每一条分支的完整通路.
+        - 类型之间的关系:Path > Branch > Statement
+- 其他问题:
+    - 为什么软件测试很难?
+        - 全面测试(Exhaustive testing)几乎不可能.
+        - 随机测试(Haphazard testing)无法发现全部漏洞.
+        - 随机和统计测试(Random or statistical testing)没能测试到一些特殊值.
+    - 什么是测试驱动开发(Test-first programming)?
+        - 首先编写规格书(Spec)用来描述程序.
+        - 编写测试(Test)来测试规格书.
+        - 实现程序(Implement).
+        - 这不是一个线性步骤,每一步都可能回到上一步进行完善,如此循环直至成熟.
+
 # Testing
 
 ## Validation 
